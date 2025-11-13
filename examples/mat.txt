@@ -1,0 +1,12 @@
+Material_number 1
+
+
+Material_Group_index 11
+Tensile_Strength +10.98000000000e+06
+Internal_Friction_Angle +1.85
+Cohesion +29.84000000000e+06
+GI_Energy_Release_Rate  +1.0000000000e+01
+GII_Energy_Release_Rate  +4.00000000000e+02
+Spring_Stiffness +900.00000000000e+9
+
+
