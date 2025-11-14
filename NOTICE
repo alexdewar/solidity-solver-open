@@ -1,0 +1,20 @@
+Copyright (C) 2017–2025, Imperial College of Science, Technology and Medicine (ICSTM).
+All rights reserved. Original implementation by Prof Antonio Munjiza and Dr Jiansheng Xiang.
+This code was originally released as part of the Solidity/VGeST project developed by ICSTM.
+
+ Dual Licensing Notice
+---------------------
+This software is available under a dual-licensing model:
+1. **Open-Source License (LGPL v3)**  
+You may use, redistribute, and/or modify this code under the terms of the GNU Lesser General Public License v3 as published by the Free Software Foundation.
+See: http://www.gnu.org/licenses/lgpl-3.0.txt
+
+ 2. **Commercial License**  
+For use in proprietary or closed-source products, or for applications not covered by the LGPL, a separate commercial license is available from the copyright holders or their authorised licensor.
+Please contact:
+    Imperial College London
+    Email: j.xiang@imperial.ac.uk
+    or the authors directly for commercial terms.
+This code is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+© Imperial College London (2025). All rights reserved.
