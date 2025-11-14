@@ -1,33 +1,36 @@
 name: CI
 
-on: push
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  qa:
+  build-and-publish:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
 
-  build-and-publish:
-    runs-on: ubuntu-22.04
-    #if: github.ref == 'refs/heads/main'
-    #needs: test
-    steps:
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@v1
+        uses: docker/login-action@v2
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Get image metadata
         id: meta
-        uses: docker/metadata-action@v3
+        uses: docker/metadata-action@v5
         with:
           images: ghcr.io/${{ github.repository }}
+
       - name: Build and push Docker image
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v6
         with:
-          #context: .
+          context: .
           push: true
           tags: ${{steps.meta.outputs.tags }}
           cache-from: type=registry,ref=${{steps.meta.outputs.tags }}
