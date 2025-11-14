@@ -1,4 +1,6 @@
-# Solidity
+# Solidity Solver (Open Source)
+
+This repository contains the **public, open-source** version of the Solidity solver.  
 
 ## Getting Started
 
@@ -39,3 +41,19 @@ On Windows (Powershell) run:
 cd examples
 ..\scripts\solidity.ps1 BST.Y3D layout.txt pellet.txt mat.txt
 ```
+
+## Development Workflow
+
+### 1. Branching Strategy
+```
+main # Stable version
+dev # Active development
+```
+
+### 2. Contributing
+1. Fork the repository.
+2. Create a branch from `dev`.
+3. Submit a PR with:
+   - tests
+   - documentation updates
+   - clear description of the change
