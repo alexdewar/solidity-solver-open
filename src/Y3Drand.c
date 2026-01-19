@@ -40,6 +40,7 @@
 
 #include "Yproto.h"
 //#include "Ycd3TETintersection.h"
+#include <omp.h>
 
 /**********************************************************************/
 /* DEBUG                                                              */
@@ -723,6 +724,3 @@ return index;
 	
 
 }
-
-
-

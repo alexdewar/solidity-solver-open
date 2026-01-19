@@ -39,6 +39,7 @@
 
 
 #include "Yproto.h"
+#include <omp.h>
 
 
 /* for development only */

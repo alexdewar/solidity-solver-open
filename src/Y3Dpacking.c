@@ -39,6 +39,7 @@
 
 
 #include "Yproto.h"
+#include <omp.h>
 
 static  CHR *cdig="0123456789";
 
@@ -481,5 +482,3 @@ else
 
 
 /* run packing test   */
-
-

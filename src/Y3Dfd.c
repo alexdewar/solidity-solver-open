@@ -39,6 +39,7 @@
 
 
 #include "Yproto.h"
+#include <omp.h>
 
 
 /* check for negative values - Z - what significance?
