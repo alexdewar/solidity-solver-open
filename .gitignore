@@ -1,7 +1,15 @@
 src/bin
 src/obj
-Ytmp
 **/build
+
+# Output files
+Ytmp
+contactforce.txt
+fract_area.txt
+fragment.txt
+gidmsh.msh
+*.Y3Dh0
+*.vtu
 
 # Zed editor settings
 .zed/**
