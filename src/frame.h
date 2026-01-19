@@ -577,14 +577,12 @@ void TformINT2_inv(  /* read array in transposed order */
   INT ***i2aray        /* array pointer */
 );
 void TformINT3(  /* read array */
-#if NeedFunctionPrototypes 
   FILE *fptr,          /* file          */
   INT iinit,           /* initialise to */
   INT n1,              /* size          */
   INT n2,              /* size          */
   INT n3,              /* size          */
   INT ****i3aray         /* array pointer */
-#endif
 );
 
 void TreadDBL1(  /* read array */
