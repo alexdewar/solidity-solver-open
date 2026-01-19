@@ -39,8 +39,6 @@
 
 
 #include "Yproto.h"
-#include <stdlib.h>
-#include <time.h>
 
 static  CHR *cdig="0123456789";
 
