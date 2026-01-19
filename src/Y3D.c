@@ -128,8 +128,7 @@ static void Ycopyright(void)
  *
  *
  */
-int main(argc, argv)
-  INT argc; char **argv;
+int main(int argc, char **argv)
 {
   /* display copyright */
   Ycopyright();
