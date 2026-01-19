@@ -2,3 +2,6 @@ src/bin
 src/obj
 Ytmp
 **/build
+
+# Zed editor settings
+.zed/**
