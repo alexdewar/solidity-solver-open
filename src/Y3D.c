@@ -288,6 +288,11 @@ clock_gettime(CLOCK_REALTIME, &tmstart);
 
           if((ydc->ncstep%ydc->icoutf)==0)
           {
+              // **HACK:** QUIT EARLY
+              if (ydc->icouti >= 10) {
+                  return EXIT_SUCCESS;
+              }
+              
           CHRw(stderr,"frame ");
               INTw(stderr,ydc->icouti,0);
               CHRw(stderr,"/"); INTw(stderr,ydc->mcstep/ydc->icoutf,0);
