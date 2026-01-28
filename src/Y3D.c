@@ -289,7 +289,7 @@ clock_gettime(CLOCK_REALTIME, &tmstart);
           if((ydc->ncstep%ydc->icoutf)==0)
           {
               // **HACK:** QUIT EARLY
-              if (ydc->icouti >= 10) {
+              if (ydc->icouti >= 3) {
                   return EXIT_SUCCESS;
               }
               
