@@ -83,7 +83,7 @@ Thread Scaling Analysis for Yfd3TET4JOINT
 EOF
 
 for threads in 1 2 4 8 12; do
-    if [ $threads -le $(nproc) ]; then
+    # if [ $threads -le $(nproc) ]; then
         echo -e "${BLUE}Testing with $threads thread(s)...${NC}"
         export OMP_NUM_THREADS=$threads
         
@@ -96,29 +96,29 @@ for threads in 1 2 4 8 12; do
         
         echo "End: $(date)" >> thread_scaling.txt
         echo "" >> thread_scaling.txt
-    fi
+    # fi
 done
 unset OMP_NUM_THREADS
 
-# Method 4: Memory usage analysis with /proc/meminfo
-echo -e "\n${GREEN}=== 4. Memory Usage Analysis ===${NC}"
-echo "Monitoring memory usage during execution..."
+# # Method 4: Memory usage analysis with /proc/meminfo
+# echo -e "\n${GREEN}=== 4. Memory Usage Analysis ===${NC}"
+# echo "Monitoring memory usage during execution..."
 
-# Background memory monitor
-(
-    echo "Memory usage over time:" > memory_usage.txt
-    while true; do
-        echo "$(date '+%H:%M:%S'): $(grep -E 'MemAvailable|MemFree' /proc/meminfo | tr '\n' ' ')" >> memory_usage.txt
-        sleep 1
-    done
-) &
-MONITOR_PID=$!
+# # Background memory monitor
+# (
+#     echo "Memory usage over time:" > memory_usage.txt
+#     while true; do
+#         echo "$(date '+%H:%M:%S'): $(grep -E 'MemAvailable|MemFree' /proc/meminfo | tr '\n' ' ')" >> memory_usage.txt
+#         sleep 1
+#     done
+# ) &
+# MONITOR_PID=$!
 
-# Run the simulation
-../$BINARY BST.Y3D layout.txt pellet.txt mat.txt > memory_run_output.txt 2>&1
+# # Run the simulation
+# ../$BINARY BST.Y3D layout.txt pellet.txt mat.txt > memory_run_output.txt 2>&1
 
-# Stop memory monitoring
-kill $MONITOR_PID 2>/dev/null || true
+# # Stop memory monitoring
+# kill $MONITOR_PID 2>/dev/null || true
 
 # Method 5: Create analysis summary
 echo -e "\n${GREEN}=== 5. Generating Analysis Report ===${NC}"
