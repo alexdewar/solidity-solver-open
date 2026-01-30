@@ -84,7 +84,7 @@ Thread Scaling Analysis with Function-Level Timing
 EOF
 
 for threads in 1 2 4 8; do
-    if [ $threads -le $(nproc) ]; then
+    #if [ $threads -le $(nproc) ]; then
         echo -e "${BLUE}Testing with $threads thread(s)...${NC}"
         export OMP_NUM_THREADS=$threads
         
@@ -101,7 +101,7 @@ for threads in 1 2 4 8; do
         
         echo "End: $(date)" >> thread_scaling_instrumented.txt
         echo "" >> thread_scaling_instrumented.txt
-    fi
+    #fi
 done
 unset OMP_NUM_THREADS
 
